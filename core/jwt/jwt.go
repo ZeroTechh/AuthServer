@@ -13,10 +13,10 @@ import (
 )
 
 // New returns new JWT.
-func New(log *zap.Logger) (*JWT, error) {
+func New(log *zap.Logger) *JWT {
 	j := JWT{}
-	err := j.init(log)
-	return &j, errors.Wrap(err, "Error while initializing")
+	j.init(log)
+	return &j
 }
 
 // JWT will handle creating and validating of access, refresh and fresh tokens.
@@ -26,10 +26,9 @@ type JWT struct {
 }
 
 // init initializes.
-func (j *JWT) init(log *zap.Logger) (err error) {
+func (j *JWT) init(log *zap.Logger) {
 	j.conn = utils.CreateGRPCClient(services.JWTService, log)
 	j.client = proto.NewJWTClient(j.conn)
-	return
 }
 
 // Fresh returns fresh access token.
@@ -48,7 +47,7 @@ func (j JWT) AccessAndRefresh(
 		UserIdentity: id, Scopes: scopes,
 	})
 	err = errors.Wrap(err, "Error while creating access and refresh token")
-	return r.AcccessToken, r.RefreshToken, err
+	return r.GetAcccessToken(), r.GetRefreshToken(), err
 }
 
 // Refresh returns new access and refresh token based on old refresh token.
@@ -57,7 +56,7 @@ func (j JWT) Refresh(
 
 	r, err := j.client.RefreshTokens(ctx, &proto.Token{Token: token})
 	err = errors.Wrap(err, "Error while refreshing token")
-	return r.AcccessToken, r.RefreshToken, r.Message, err
+	return r.GetAcccessToken(), r.GetRefreshToken(), r.GetMessage(), err
 }
 
 // Validate validates a token.
@@ -70,10 +69,10 @@ func (j JWT) Validate(
 		Type: tokenType, Token: token,
 	})
 	err = errors.Wrap(err, "Error while validating token")
-	return *r, r.Message, err
+	return *r, r.GetMessage(), err
 }
 
 // Disconnect will disconnect from service.
-func (j JWT) Disconnect() {
+func (j *JWT) Disconnect() {
 	j.conn.Close()
 }

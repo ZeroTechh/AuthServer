@@ -16,8 +16,7 @@ func TestJWT(t *testing.T) {
 	scopes := []string{"read", "write"}
 	cfg := zap.NewDevelopmentConfig()
 	logger, _ := cfg.Build()
-	j, err := New(logger)
-	assert.NoError(err)
+	j := New(logger)
 
 	fresh, err := j.Fresh(ctx, id)
 	assert.NoError(err)
