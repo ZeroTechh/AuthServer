@@ -11,6 +11,7 @@ github.com/ZeroTechh/blaze v0.1.5 h1:9mpyMJOxrVzGf2PySrjwMXy20VRolBX3Hmy6VuUbRus
 github.com/ZeroTechh/blaze v0.1.5/go.mod h1:VlFs7I4ULXTM3OfX+E8yvfuDecaNORKPa08xR1Oq8x8=
 github.com/ZeroTechh/blaze v0.1.6 h1:3ob6f8RTSP5Wd8KsBjJMlLeQMMihwbpRTatLzSvCl3Y=
 github.com/ZeroTechh/blaze v0.1.6/go.mod h1:VlFs7I4ULXTM3OfX+E8yvfuDecaNORKPa08xR1Oq8x8=
+github.com/ZeroTechh/hades v0.1.9 h1:nh75RfWgQx0gPR0lEqycBiXJOzXaT6X1rJsTCztioRU=
 github.com/ZeroTechh/hades v0.1.9/go.mod h1:X5Bdn4quK5Hu0cpKqiilBua1P6akVGnRS3zbmO+/2k4=
 github.com/ZeroTechh/sentinal/v2 v2.0.10/go.mod h1:hTrPAov4OunxZ1BNXskfhTfNeRLCshHfY2RE/g8jqm4=
 github.com/asaskevich/govalidator v0.0.0-20190424111038-f61b66f89f4a/go.mod h1:lB+ZfQJz7igIIfQNfa7Ml4HSf2uFQQRzpGGRXenZAgY=
@@ -213,6 +214,7 @@ gopkg.in/yaml.v2 v2.2.2 h1:ZCJp+EgiOT7lHqUV2J862kp8Qj64Jo6az82+3Td9dZw=
 gopkg.in/yaml.v2 v2.2.2/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
 gopkg.in/yaml.v2 v2.2.5 h1:ymVxjfMaHvXD8RqPRmzHHsB3VvucivSkIAvJFDI5O3c=
 gopkg.in/yaml.v2 v2.2.5/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
+gopkg.in/yaml.v3 v3.0.0-20191107175235-0b070bb63a18 h1:VaaR1yHVgJQaTGM1DXum4OU6He6gaZXAPII85hHgSzQ=
 gopkg.in/yaml.v3 v3.0.0-20191107175235-0b070bb63a18/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
 honnef.co/go/tools v0.0.0-20190102054323-c2f93a96b099/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
